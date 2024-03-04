@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(69, 152, 140);
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+}
+.item {
+  border: 1px solid rgb(69, 152, 140);
+  background-color: #fff;
+}
+input {
+  appearance: none;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(69, 152, 140);
+  width: 100%;
+  position: relative;
+}
+#box-1::before {
+  content: "America";
+}
+#box-2::before {
+  content: "Germany";
+}
+#box-3::before {
+  content: "India";
+}
+#box-4::before {
+  content: "Japan";
+}
+#box-5::before {
+  content: "Spain";
+}
+
+input::before {
+  color: rgb(69, 152, 140);
+}
+input::after {
+  content: url(img/plus.png);
+  position: absolute;
+  right: 5%;
+  bottom: 25%;
+}
+p {
+  display: none;
+  padding: 10px;
+  color: #fff;
+  background-color: rgb(83, 183, 168);
+}
+
+input:checked + p {
+  display: block;
+}
+input:checked::after {
+  content: url(img/minus.png);
+}
